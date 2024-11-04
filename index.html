@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            outline: none;
+            padding: 0px;
+            background-color: black;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .con{
+            height: 50vh;
+            width: 40%;
+            border: 5px solid white;
+            border-radius: 20px;
+        }
+        .disp{
+            height: 20%;
+            width: 100%;
+        }
+        .disp{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            color: white;
+            text-align: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .disp input{
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            color: white;
+            text-align: right;
+            padding: 0px 10px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        .pan{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 75%;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .pan button{
+            color: white;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        #equal{
+            background-color: red;
+        }
+        #equal i{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="con">
+            <div class="disp">
+                <input type="text" id="disp1">
+                <h1><i class="fa-solid fa-arrow-right"></i></h1>
+                <input type="text" id="disp2">
+            </div>
+            <br>
+            <div class="pan">
+                <button onclick="fun('$')">$</button>
+                <button onclick="fun('singapore')">singapore</button>
+                <button onclick="fun('UK')">UK</button>
+                <button onclick="fun('AUS')">Australia</button>
+                <button onclick="fun('China')">China</button>
+                <button onclick="fun('Nepal')">Nepal</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let d=document.getElementById("disp1")
+        let b=document.getElementById("disp2")
+        function fun(a){
+            if (a=='$'){
+                b.value=d.value*0.0119+"$"
+            }
+            else if(a=='singapore'){
+                b.value=d.value*0.016+"$"
+            }
+            else if(a=='UK'){
+                b.value=d.value*0.0092
+            }
+            else if(a=='China'){
+                b.value=d.value*0.084
+            }
+            else if(a=='AUS'){
+                b.value=d.value*0.018
+            }
+            else if(a=='Nepal'){
+                b.value=d.value*1.60
+            }
+        }
+    </script>
+</body>
+</html>
